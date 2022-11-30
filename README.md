@@ -1,5 +1,4 @@
-## CrossyRoad 
-EXE is under Execuatable folder
+## Executable File of CrossyRoad
 
 ## Document
 More Document about MLagent is at https://github.com/Unity-Technologies/ml-agents/blob/release_19_docs/docs/Readme.md <br />
