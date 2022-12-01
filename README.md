@@ -1,6 +1,7 @@
-## Executable File of CrossyRoad
+# Executable File of CrossyRoad
 
 ## Document
+
 More Document about MLagent is at https://github.com/Unity-Technologies/ml-agents/blob/release_19_docs/docs/Readme.md <br />
 Useful Doc:
 - [API Docs/Python API Documentation](https://github.com/Unity-Technologies/ml-agents/blob/release_19_docs/docs/Python-API-Documentation.md)
@@ -9,6 +10,7 @@ Useful Doc:
 - [Python Tutorial with Google Colab/Q-Learning with a UnityEnvironment](https://colab.research.google.com/github/Unity-Technologies/ml-agents/blob/release_19_docs/colab/Colab_UnityEnvironment_2_Train.ipynb) 
 
 ## Installation
+
 1. create an enviroment with **Python 3.6 or 3.7**
 2. Install the pytorch from https://pytorch.org/get-started/locally/
 3. Install the mlagent with pip
@@ -22,6 +24,7 @@ pip install importlib-metadata==4.4
 More Installation Detail at https://github.com/Unity-Technologies/ml-agents/blob/release_19_docs/docs/Installation.md
 
 ## Usage (Command Line)
+
 Run the MLAgent Default Model(PPO/SAC) by Anaconda command prompt under the folder with exe
 ```
 mlagents-learn <config path> --env=<exe name> --run-id=<run_name>
@@ -32,6 +35,7 @@ mlagents-learn config\player_config.yaml --env="CRML" --run-id=test
 ```
 
 ## Usage (Python)
+
 To load a Unity environment from a built binary file, put the file in the same directory
 as enviroment(exe), run:
 ```python
@@ -45,5 +49,6 @@ behavior_names = env.behavior_specs.keys()
 ```
 more Details at https://github.com/Unity-Technologies/ml-agents/blob/release_19_docs/docs/Python-API.md
 
-# SPEC
+## SPEC
+
 SPEC of observation and action in under each version's folder. <br />
