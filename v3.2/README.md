@@ -21,3 +21,11 @@ Observation Vector (of one): <br/>
 ## Reward
 Dead: -1 <br />
 Beating Highest score: 1<br />
+Moving before first 15 seconds:
+- Foward : 0.1
+- Other than stop : -0.1
+
+After first 15 seconds:
+- Not Beating Highscore in 5 second: -0.0001 * time interval (cap at -0.01)
+
+Episode end if reward < -5 or Died
