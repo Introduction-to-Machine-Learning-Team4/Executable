@@ -5,26 +5,26 @@ Discrete Action: 1 <br />
 0: No Movement/1: Front/2: Back/3: Left/4: Right
 
 ## Observation Space
-Total size: 30 <br />
-30 feature obsered 
+Total size: 67 <br />
+67 feature obsered 
 - size 2: Player Coordinate(X,Z)
-- size 4: The type of line which relative to player(previous,current,next two)<br />
+- size 5: The type of line which relative to player(-1~3)<br />
 type 0: Grass, 1: Road, 2: Water
-- size 2: The Obstacles Coordinate(X,Z)<br />
-3 obstacle observed per line. 6 feature per line. Total 24 feature.<br /> 
-pad the x,z with (-10 + random) if obstacles less then 3 
+- size 4: The Obstacles Type, Coordinate(X,Z), Width<br />
+3 obstacle observed per line. 12 feature per line. Total 36 feature.<br /> 
+pad the x,z with (-10 + random) if observation is missed
 
 Observation Vector (of one): <br/>
-[Player.x, Player.z, Line -1 Type, Obstacles_-1_1.x, Obstacles_-1_1.z, Obstacles_-1_2.x, Obstacles_-1_2.z, Obstacles_-1_3.x, Obstacles_-1_3.z, Line 0 Type, ...]
+[Player.x, Player.z, Line -1 Type,Obstacles_-1_1.type, Obstacles_-1_1.x, Obstacles_-1_1.z, Obstacles_-1_1.width,...]
 
 ## Reward
-Dead: -1 <br />
+Dead: -0.5 <br />
 Beating Highest score: 1<br />
 Moving before first 15 seconds:
 - Foward : 0.1
 - Other than stop : -0.1
 
 After first 15 seconds:
-- Not Beating Highscore in 5 second: -0.0001 * time interval (cap at -0.01)
+- Not Beating Highscore in 5 second: -0.00001 * time interval (cap at -0.001)
 
 Episode end if not beating the highscore in 30 second or Died
