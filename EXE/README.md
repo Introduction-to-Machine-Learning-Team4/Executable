@@ -18,13 +18,14 @@ Observation Vector (of one): <br/>
 [Player.x, Player.z, Line -1 Type,Obstacles_-1_1.type, Obstacles_-1_1.x, Obstacles_-1_1.z, Obstacles_-1_1.width,...]
 
 ## Reward
-Dead: -0.5 <br />
-Beating Highest score: 1<br />
+Dead: Set -0.8 * score <br />
+Beating Highest score: Set 1<br />
+Stucking On Wall: Add -0.5 <br />
 Moving before first 15 seconds:
-- Foward : 0.1
-- Other than stop : -0.1
+- Foward : Add 0.2
+- Backward: Add -0.1
 
-After first 15 seconds:
-- Not Beating Highscore in 5 second: -0.00001 * time interval (cap at -0.001)
+MovingAfter first 15 seconds:
+- Not Beating Highscore in 5 second: Add -0.0001 * time interval (cap at -0.001)
 
 Episode end if not beating the highscore in 30 second or Died
