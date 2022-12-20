@@ -1,7 +1,8 @@
 # Executable File of CrossyRoad
 
-`WARNING` : this branch has speedup to 10 and remove water from generating
-
+`EXE\headless` is headless, which means there's no graphic rendering. <br />
+`EXE\Client` has graphic.<br />
+Two of Exe run at 10 times speed.<br />
 ## Document
 
 More Document about MLagent is at https://github.com/Unity-Technologies/ml-agents/blob/release_19_docs/docs/Readme.md <br />
