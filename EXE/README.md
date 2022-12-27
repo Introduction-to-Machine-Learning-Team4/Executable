@@ -8,6 +8,7 @@ Discrete Action: 1 <br />
 Total size: 147 <br />
 Grid size: 7*21 (7 row , 21 grid on row) <br />
 Grid of observation
+- -2: Boundary
 - -1: Player (In the middle)
 - 0: Safe Spot
 - 1: Car
@@ -16,11 +17,8 @@ Grid of observation
 
 
 ## Reward
-Dead: Set -0.2 * score (cap at -5.0) <br />
+Dead: Set -1
 Beating Highest score: Set 1<br />
-Stucking On Wall: Add -0.5 <br />
-
-MovingAfter first 15 seconds:
-- Not Beating Highscore in 15 second: Add -0.0001 * time interval (cap at -0.001)
+Stucking On Wall: Set -0.5 <br />
 
 Episode end if not beating the highscore in 45 second or Died
